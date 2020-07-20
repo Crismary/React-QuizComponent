@@ -8,10 +8,10 @@ class QuizQuestion extends Component{
   }
   handleClick(buttonText) {
     if(buttonText === this.props.quiz_question.answer) {
-      this.setState(false)
+      this.setState({ incorrectAnswer: false })
       this.props.showNextQuestionHandler()
     } else{
-      this.setState(true)
+      this.setState({ incorrectAnswer: true })
     }
   }
   render(){
